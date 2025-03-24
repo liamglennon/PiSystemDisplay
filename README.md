@@ -21,5 +21,40 @@ This project uses a Raspberry Pi to visually monitor system metrics from a Windo
 Install required packages:
 
 ```bash
-pip install flask psutil
+pip install flask psutil 
+```
 
+### On Raspberry Pi
+Python 3
+- `requests`
+- `wmctrl`
+- A display and GUI environment
+
+```bash
+sudo apt install wmctrl -y
+pip3 install requests
+```
+
+### Setup
+## Windows Flask Server
+system_metrics.py
+
+```bash
+python system_metrics.py
+```
+Ensure port 5000 is allowed through your Windows firewall.
+
+
+## Raspberry Pi Display Script
+```bash
+python system_metrics.py
+```
+
+## Future Improvements
+- Add Raspberry Pi self-monitoring
+
+- Include network usage and GPU stats
+
+- Add error logs and retry logic
+
+- Better GUI 
